@@ -5,6 +5,7 @@ yum = 0
 path = file[2]
 last4 = '////'
 f = 0
+# ok, tale ni funkcijsko narjena, ker sem jo sprogramiru preden sem se tega spomnu, ne da se mi je pa rewritat
 for i in range(int(file[1])):
     if path[i] == '|':
         if last4[1:] != "|||" or last4 == "||||": # ce so ze 4 zaporedne stvari trava, vemo da prejsnje ni pojedla -> eno je ze preskocila, tako da lahko spet zacne
