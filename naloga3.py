@@ -8,7 +8,7 @@ lim: list[tuple[int, int]]
 lim = []
 lim.append((0, int(file[0].split(" ")[1])))
 # a se vidi da sem se lani naucil haskell?
-list(map(lambda str: lim.append(tuple(map(int, str.split(" ")[0:2]))), file[1:signs+1]))
+lim = reduce(lambda acc, s: acc + [tuple(map(int, s.split(" ")[0:2]))], file[1:signs+1], [(int(0), int(file[0].split(" ")[1]))])
 limTo: list[tuple[int, int, int]]
 limTo = reduce(lambda acc, s: acc[:-1] + [(*acc[-1][:-1], s[0])] + [(*s, path)], lim[1:], [(*lim[0], path)])
 
